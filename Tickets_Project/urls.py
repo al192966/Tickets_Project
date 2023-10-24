@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
+from TicketOn import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('TicketOn.urls')),
+    path('', views.Home, name = 'home'),
+    path('signup/', views.signup, name = 'signup')
 ]
