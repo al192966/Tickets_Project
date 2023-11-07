@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include("TicketOn.urls")),
     path('', views.Home, name = 'home'),
+    path('home/',views.Home,name='home'),
     path('signup/', views.signup, name = 'signup'),
     path('eventos/', views.eventos, name = 'eventos'),
     path('logout/', views.CS, name = 'logout'),
